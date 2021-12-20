@@ -1,4 +1,4 @@
-uconst Engine = Matter.Engine;
+const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
@@ -8,7 +8,7 @@ var canvas;
 var palyer, playerBase;
 var computer, computerBase;
 
-//Declare an array for arrows playerArrows = [ ]
+// Declarar un arreglo para las flechas playerArrows = [ ]
 var playerArrows = [];
 
 var arrow;
@@ -58,7 +58,7 @@ function draw() {
 
   Engine.update(engine);
 
-  // Title
+  // Título
   fill("#FFFF");
   textAlign("center");
   textSize(40);
@@ -88,7 +88,7 @@ function draw() {
 
 }
 
-/*********** Choose correct keyPressed() function out of these *************/
+/*********** Elije la función keyPressed() correcta de las siguientes opciones *************/
 
 function keyPressed() {
   if(keyCode === 32){
@@ -111,7 +111,7 @@ function keyPressed() {
 function keyReleased () {
 
   if(keyCode === 32){
-    //call shoot() function for each arrow in an array playerArrows
+    // Llama a la función shoot() por cada flecha en el arreglo playerArrows
     if (playerArrows.length) {
       var angle = playerArcher.body.angle+PI/2;
       playerArrows[playerArrows.length - 1].shoot(angle);
@@ -119,7 +119,7 @@ function keyReleased () {
   }
 
 }
-//Display arrow and Tranjectory
+// Mostrar flecha y trayectoria
 function showArrows(index, arrows) {
   arrows[index].display();
   
